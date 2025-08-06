@@ -1,10 +1,14 @@
+import java.util.Scanner;
 public class App {
-public static void main(String[] args) {
-    System.out.println("\nHello world!");
-    String version = System.getProperty("java.version");
-    System.out.println("Running Java Version: "+version+"\n");
-    String name = System.getProperty("user.name");
-    System.out.println("User account name: "+name+"\n");
+ public static void main(String args[]){
+ Scanner s = new Scanner(System.in);
+ System.out.print("Indique o nome do professor: ");
+ String nome = s.nextLine();
+ System.out.print("Indique quantos anos de experiencia ele tem: ");
+ int experiencia = s.nextInt();
+ Professor p = new Professor(nome,experiencia);
+ System.out.println(p.toString());
+ System.out.println("Categoria: "+p.classifica());
  }
 }
 
